@@ -6,6 +6,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
 from core import models
+from shop.models import Product, Category
 
 
 class UserAdmin(BaseUserAdmin):
@@ -45,6 +46,6 @@ class UserAdmin(BaseUserAdmin):
 
 
 admin.site.register(models.User, UserAdmin)
-# admin.site.register(models.Recipe)
-# admin.site.register(models.Tag)
+admin.site.register(Product)
+admin.site.register(Category)
 # admin.site.register(models.Ingredient)
